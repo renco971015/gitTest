@@ -52,5 +52,6 @@ public class Test {
 
 
         String rebase7;
+        String rebase8;
     }
 }
