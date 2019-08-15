@@ -49,5 +49,8 @@ public class Test {
 
         String rebase5;
         String rebase6;
+
+
+        String rebase7;
     }
 }
