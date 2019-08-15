@@ -53,5 +53,6 @@ public class Test {
 
         String rebase7;
         String rebase8;
+        System.out.println("rebase测试");
     }
 }
