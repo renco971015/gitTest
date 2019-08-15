@@ -17,5 +17,6 @@ public class New {
 
         System.out.println("rebase使用2");
         System.out.println("rebase使用3");
+        System.out.println("rebase使用4");
     }
 }
