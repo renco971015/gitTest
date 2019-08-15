@@ -22,5 +22,6 @@ public class New2 {
 
         System.out.println("rebase功能使用7");
         System.out.println("rebase功能使用8");
+        System.out.println("rebase功能使用9");
     }
 }
