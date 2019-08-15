@@ -16,5 +16,8 @@ public class New2 {
         System.out.println("rebase功能使用2");
         System.out.println("rebase功能使用3");
 
+        System.out.println("rebase功能使用444");
+        System.out.println("rebase功能使用555");
+        System.out.println("rebase功能使用666");
     }
 }
