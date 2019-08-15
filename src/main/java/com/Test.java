@@ -43,5 +43,8 @@ public class Test {
 
         String rebase1;
         String rebase2;
+
+        String rebase3;
+        String rebase4;
     }
 }
