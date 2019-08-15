@@ -10,4 +10,11 @@ package com;
  * 说明：<br>
  */
 public class New2 {
+
+    public static void main(String[] args) {
+
+        System.out.println("rebase功能使用2");
+        System.out.println("rebase功能使用3");
+
+    }
 }
