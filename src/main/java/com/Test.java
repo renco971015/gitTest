@@ -46,5 +46,8 @@ public class Test {
 
         String rebase3;
         String rebase4;
+
+        String rebase5;
+        String rebase6;
     }
 }
