@@ -30,6 +30,9 @@ public class Test {
         System.out.println("test修改2222");
         System.out.println("新增内容");
 
+        System.out.println("提交1");
+        System.out.println("提交2");
+        System.out.println("提交3");
 
     }
 }
