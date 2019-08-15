@@ -37,5 +37,9 @@ public class Test {
         System.out.println("lidinglin的rebase提交1");
         System.out.println("lidinglin的rebase提交2");
         System.out.println("lidinglin的rebase提交3");
+
+        System.out.println("lidinglin的rebase提交4");
+        System.out.println("lidinglin的rebase提交5");
+
     }
 }
