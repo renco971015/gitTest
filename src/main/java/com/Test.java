@@ -42,5 +42,6 @@ public class Test {
         System.out.println("lidinglin的rebase提交5");
 
         String rebase1;
+        String rebase2;
     }
 }
