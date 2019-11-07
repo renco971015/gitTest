@@ -8,5 +8,121 @@
     <artifactId>git-Test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <repository.url>http://116.228.233.90:5881/nexus/content/groups/public/</repository.url>
+        <snapshots.url>http://116.228.233.90:5881/nexus/content/repositories/snapshots/</snapshots.url>
+        <thirdparty.url>http://116.228.233.90:5881/nexus/content/repositories/thirdparty/</thirdparty.url>
+        <fcmsp-boot-dependencies.version>0.0.9</fcmsp-boot-dependencies.version>
+        <fcmsp-common-bus-base.version>0.0.3</fcmsp-common-bus-base.version>
+        <fcmsp-boot-dependencies.version>0.0.9</fcmsp-boot-dependencies.version>
+        <fcmsp-common-bus-base.version>0.0.4</fcmsp-common-bus-base.version>
+        <fcmsp-common-bus-sequence.version>0.0.1</fcmsp-common-bus-sequence.version>
+        <fcmsp-common-bus-bean.version>0.0.5</fcmsp-common-bus-bean.version>
+        <fcmsp-common-bus-network.version>0.0.1</fcmsp-common-bus-network.version>
+        <fcmsp-common-bus-pagydatabase.version>0.0.2</fcmsp-common-bus-pagydatabase.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fcmspframework.boot</groupId>
+                <artifactId>fcmsp-boot-dependencies</artifactId>
+                <version>${fcmsp-boot-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.17</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fcmsp.pay.mcht</groupId>
+            <artifactId>fcmsp-mcht-api</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
+        <!--测试框架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.3.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+    </dependencies>
+
+    <!-- JAR仓库 -->
+    <repositories>
+        <repository>
+            <id>ifsp</id>
+            <url>${repository.url}</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>${snapshots.url}</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <!-- 插件仓库 -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ifsp</id>
+            <url>${repository.url}</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.10.8:18080/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.10.8:18080/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
